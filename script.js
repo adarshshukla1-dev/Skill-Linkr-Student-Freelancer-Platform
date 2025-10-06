@@ -44,3 +44,6 @@ sections.forEach(section => {
   section.classList.add('hidden');
   observer.observe(section);
 });
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
