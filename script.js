@@ -15,4 +15,12 @@ document.querySelectorAll('nav ul li a').forEach(link =>
     navUl.classList.remove('show');
   });
 });
+//Contact Form Submission
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Form submitted successfully! We will contact you soon.');
+  contactForm.reset();
+});
 
