@@ -108,7 +108,12 @@ nav ul {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
-
+@media (max-width: 768px) {
+  #how .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 @media (max-width: 768px)
 {
  .hero h2 {
