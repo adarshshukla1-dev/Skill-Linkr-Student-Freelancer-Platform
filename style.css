@@ -334,7 +334,7 @@ footer .footer-container {
 footer .footer-left h4 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 footer .footer-left h4 span {
@@ -343,7 +343,7 @@ footer .footer-left h4 span {
 
 footer .footer-left p {
   margin-top: 10px;
-  color: #F3F4F6; /* Light Gray for readability */
+  color: #000000; 
   font-size: 0.95rem;
 }
 
@@ -353,7 +353,7 @@ footer .footer-right p {
 }
 
 footer .social-icons a {
-  color: var(--color-white);
+  color: var(--color-black);
   margin-right: 15px;
   font-size: 1.4rem;
   transition: color 0.3s, transform 0.3s;
