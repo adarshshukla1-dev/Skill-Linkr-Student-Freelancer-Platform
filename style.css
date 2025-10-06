@@ -1,5 +1,4 @@
-/* ---------- Reset & Base Styles ---------- */
-* {
+ {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -84,7 +83,52 @@ nav ul {
     display: flex;
   }
 
-  .menu-toggle {
+  .menu-toggle
+  /* ---------- Hero Section ---------- */
+.hero {
+  background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+  padding: 100px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #374151;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero .btn-primary {
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+.hero .btn-secondary {
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+  {
     display: block;
     cursor: pointer;
     font-size: 1.5rem;
