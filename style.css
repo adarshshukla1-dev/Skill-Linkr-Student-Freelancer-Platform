@@ -155,3 +155,17 @@ form input, form textarea {
 form input:focus, form textarea:focus {
   border-color: var(--color-primary);
 }
+footer
+{
+  background-color: var(--color-white);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  border-top: 1px solid #E5E7EB;
+}
+
+footer p
+{
+  font-size: 0.9rem;
+  color: #6B7280;
+}
