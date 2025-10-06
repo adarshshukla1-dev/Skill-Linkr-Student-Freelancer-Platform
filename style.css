@@ -315,7 +315,7 @@ nav ul {
 /* ---------- Footer Section ---------- */
 footer {
   background-color: var(--color-primary); 
-  color: var(--color-white);
+  color: var(--color-black);
   padding: 50px 0 30px 0;
   font-family: 'Poppins', sans-serif;
 }
