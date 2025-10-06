@@ -18,10 +18,10 @@ body {
   margin: 0 auto;
 }
 :root {
-  --color-primary: #4F46E5;   /* Indigo */
-  --color-accent: #FACC15;    /* Golden Yellow */
-  --color-bg: #F9FAFB;        /* Light Gray */
-  --color-text: #1F2937;      /* Dark Gray */
+  --color-primary: #4F46E5;   
+  --color-accent: #FACC15;    
+  --color-bg: #F9FAFB;        
+  --color-text: #1F2937;      
   --color-white: #FFFFFF;
 }
 header
@@ -54,6 +54,48 @@ nav ul li a:hover
 {
   color: var(--color-primary);
 }
+/* ---------- Navbar Flex & Mobile ---------- */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--color-white);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+  }
+}
+
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+}
+
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-white);
