@@ -610,3 +610,43 @@ nav ul li a:hover,
 nav ul li a.active {
   color: var(--color-accent);
 }
+/* ---------- Global Responsiveness ---------- */
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
+}
