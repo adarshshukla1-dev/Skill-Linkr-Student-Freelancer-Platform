@@ -673,3 +673,48 @@ nav ul li a.active {
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero .btn-primary,
+  .hero .btn-secondary {
+    width: 80%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  #contact form {
+    width: 95%;
+    gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  footer .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  footer .social-icons {
+    justify-content: center;
+  }
+}
