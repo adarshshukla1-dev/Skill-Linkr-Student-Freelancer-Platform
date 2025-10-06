@@ -390,20 +390,7 @@ footer .footer-bottom {
     gap: 20px;
   }
 }
-@media (max-width: 768px)
-{
- .hero h2 {
-    font-size: 2.2rem;
-  }
 
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
   nav ul {
     display: none;
     flex-direction: column;
