@@ -120,7 +120,16 @@ nav ul {
   max-width: 600px;
   margin-bottom: 30px;
 }
+.hero .btn-primary:hover {
+  background-color: #3730a3; /* Slightly darker Indigo */
+  transform: translateY(-3px);
+}
 
+.hero .btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-3px);
+}
 .hero-buttons {
   display: flex;
   gap: 20px;
