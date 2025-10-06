@@ -24,3 +24,23 @@ contactForm.addEventListener('submit', function(e) {
   contactForm.reset();
 });
 
+// Scroll reveal animation
+const sections = document.querySelectorAll('section');
+
+const revealSection = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(revealSection, {
+  threshold: 0.15
+});
+
+sections.forEach(section => {
+  section.classList.add('hidden');
+  observer.observe(section);
+});
