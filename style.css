@@ -211,3 +211,7 @@ footer p
   font-size: 0.9rem;
   color: #6B7280;
 }
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--color-accent);
+}
