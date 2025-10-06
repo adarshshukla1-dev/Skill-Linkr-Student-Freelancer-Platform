@@ -313,9 +313,8 @@ nav ul {
   transform: translateY(-3px);
 }
 /* ---------- Footer Section ---------- */
-/* ---------- Footer Section Updated ---------- */
 footer {
-  background-color: var(--color-primary); /* Indigo */
+  background-color: var(--color-primary); 
   color: var(--color-white);
   padding: 50px 0 30px 0;
   font-family: 'Poppins', sans-serif;
@@ -335,7 +334,7 @@ footer .footer-container {
 footer .footer-left h4 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 footer .footer-left h4 span {
