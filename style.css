@@ -64,6 +64,51 @@ nav ul {
   display: flex;
   gap: 25px;
 }
+/* ---------- How It Works Section ---------- */
+#how {
+  background-color: var(--color-bg);
+  padding: 80px 0;
+  text-align: center;
+}
+
+#how h3 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--color-primary);
+}
+
+#how .cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#how .card {
+  background-color: var(--color-white);
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex: 1 1 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#how .card h4 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+
+#how .card p {
+  font-size: 1rem;
+  color: #4B5563;
+}
+
+#how .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
 @media (max-width: 768px)
 {
  .hero h2 {
