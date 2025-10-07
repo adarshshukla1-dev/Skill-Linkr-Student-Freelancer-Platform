@@ -636,14 +636,21 @@ nav ul li a.active {
 }
 
 .steps {
-  background: #fafafa;
-  padding: 50px 20px;
   text-align: center;
+  padding: 50px 20px;
 }
 
-.steps ol {
-  list-style: decimal;
-  margin: 20px auto;
-  width: fit-content;
-  text-align: left;
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
+
+.steps-grid .card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
