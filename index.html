@@ -1,371 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skill Linkr - Student Freelancer Platform</title>
-  <meta name="description" content="Skill Linkr connects student freelancers directly with clients — fast, affordable, and reliable.">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    /* ------------------------------------------- */
-    /* CSS for Login Modal and Content Visibility  */
-    /* ------------------------------------------- */
-    .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9); 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000; 
-    }
-
-    .modal-content {
-        background-color: #fff;
-        padding: 40px;
-        border-radius: 10px;
-        width: 90%;
-        max-width: 400px;
-        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-        text-align: center;
-    }
-
-    .modal-content h2 {
-        margin-bottom: 25px;
-        color: #1a1a1a; 
-    }
-
-    #loginForm label {
-        display: block;
-        text-align: left;
-        margin-bottom: 5px;
-        font-weight: 500;
-        color: #555;
-    }
-
-    #loginForm input {
-        width: 100%;
-        padding: 14px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-sizing: border-box;
-        font-size: 16px;
-    }
-    
-    /* Login Error Message Style */
-    #login-message {
-        color: red;
-        margin-bottom: 15px;
-        font-weight: 600;
-        display: none;
-    }
-
-    /* 🔑 Hiding Header, Footer, and Main Content by Default */
-    header, #main-content, footer {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s ease-in-out; 
-        pointer-events: none;
-        height: 0; /* Ensures no scroll space is taken */
-    }
-    
-    /* 🔓 Showing everything when logged in */
-    .logged-in header, .logged-in #main-content, .logged-in footer {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        height: auto;
-    }
-    
-    /* Ensure primary/secondary buttons are styled correctly */
-    .btn-primary {
-        background-color: #007bff; /* Example color */
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    
-    .btn-secondary {
-        background-color: transparent;
-        color: #007bff;
-        border: 1px solid #007bff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Linkr - Student Freelancer Platform</title>
+  <meta name="description" content="Skill Linkr connects student freelancers directly with clients — fast, affordable, and reliable.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="logged-out">
+<body>
+ <header>
+  <div class="menu-toggle">&#9776; </div>
+      <div class="container">
+  <div class="logo">
+        <h1><span>Skill</span> Linkr</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="for-students.html">For Students</a></li>
+          <li><a href="for-client.html">For Clients</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+</header>
+  </body>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Hire Talented Student Freelancers Directly</h2>
+      <p>Skill Linkr connects students with clients — fast, affordable, and reliable.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary">Hire Now</button>
+        <button class="btn-secondary">Join as Student</button>
+      </div>
+    </div>
+  </section>
 
-  <div id="login-modal" class="modal-overlay" style="display: none;">
-    <div class="modal-content">
-      <h2>👋 Welcome to Skill Linkr</h2>
-      <p id="login-message">Invalid credentials. Please try again.</p>
-      
-      <form id="loginForm">
-        
-        <label for="login-email">Email Address</label>
-        <input type="email" id="login-email" placeholder="student@university.com" required>
+  <!-- How It Works Section -->
+  <section id="how">
+    <div class="container">
+      <h3>How It Works</h3>
+      <div class="cards">
+        <div class="card">
+          <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
+          <h4>1. Post Project</h4>
+          <p>Clients post their project briefs easily.</p>
+        </div>
+        <div class="card">
+          <h4>2. Students Apply</h4>
+          <p>Students submit proposals with portfolios.</p>
+        </div>
+        <div class="card">
+          <h4>3. Hire & Pay</h4>
+          <p>Clients hire, collaborate, and release payment securely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <label for="login-password">Password</label>
-        <input type="password" id="login-password" placeholder="Enter your password" required>
-
-        <button type="submit" class="btn-primary" style="margin-top: 10px;">Secure Login</button>
-      </form>
-      <p style="margin-top: 20px;">Don't have an account? <a href="for-students.html">Sign Up as Student</a></p>
+  <!-- Students Section -->
+  <section id="students">
+    <div class="container">
+      <h3>For Students</h3>
+      <div class="cards">
+        <div class="card">
+        <i class="fa fa-user fa-2x"></i>
+          <h4>Create Profile</h4>
+        <p>Build a portfolio showcasing your skills and projects.</p>
+      </div>
+      <div class="card">
+        <i class="fa fa-briefcase fa-2x"></i>
+        <h4>Apply to Projects</h4>
+        <p>Find freelance projects and submit proposals easily.</p>
+      </div>
+      <div class="card">
+        <i class="fa fa-check-circle fa-2x"></i>
+        <h4>Get Verified</h4>
+        <p>Earn credibility and boost your chances of getting hired.</p>
+      </div>
     </div>
   </div>
-   <header>
-  <div class="menu-toggle">&#9776; </div>
-      <div class="container">
-  <div class="logo">
-        <h1><span>Skill</span> Linkr</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#students">For Students</a></li>
-          <li><a href="#clients">For Clients</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="about.html">About Us</a></li>
-                    <li><button id="header-login-btn" class="btn-secondary">Login</button></li> 
-        </ul>
-      </nav>
-    </div>
-</header>
-
-<div id="main-content">
-
-    <section id="home" class="hero">
-    <div class="container">
-      <h2>Hire Talented Student Freelancers Directly</h2>
-      <p>Skill Linkr connects students with clients — fast, affordable, and reliable.</p>
-      <div class="hero-buttons">
-        <a href="for-client.html" class="btn-primary">Hire Now</a>
-        <a href="for-students.html" class="btn-secondary">Join as Student</a>
-      </div>
-    </div>
-  </section>
-
-    <section id="how">
-    <div class="container">
-      <h3>How It Works</h3>
-      <div class="cards">
-        <div class="card">
-          <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
-          <h4>1. Post Project</h4>
-          <p>Clients post their project briefs easily.</p>
-        </div>
-        <div class="card">
-          <h4>2. Students Apply</h4>
-          <p>Students submit proposals with portfolios.</p>
-        </div>
-        <div class="card">
-          <h4>3. Hire & Pay</h4>
-          <p>Clients hire, collaborate, and release payment securely.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    <section id="students">
-    <div class="container">
-      <h3>For Students</h3>
-      <div class="cards">
-        <div class="card">
-        <i class="fa fa-user fa-2x"></i>
-          <h4>Create Profile</h4>
-        <p>Build a portfolio showcasing your skills and projects.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-briefcase fa-2x"></i>
-        <h4>Apply to Projects</h4>
-        <p>Find freelance projects and submit proposals easily.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-check-circle fa-2x"></i>
-        <h4>Get Verified</h4>
-        <p>Earn credibility and boost your chances of getting hired.</p>
-      </div>
-    </div>
-  </div>
 </section>
-    <section id="clients">
-    <div class="container">
-      <h3>For Clients</h3>
-      <div class="cards">
-     <div class="card">
-        <i class="fa fa-pencil-alt fa-2x"></i>
-        <h4>Post Briefs</h4>
-        <p>Easily share your project requirements with students.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-search fa-2x"></i>
-        <h4>Review Portfolios</h4>
-        <p>Check student portfolios to find the perfect match for your project.</p>
-        </div>
-      <div class="card">
-        <i class="fa fa-dollar-sign fa-2x"></i>
-        <h4>Pay Safely</h4>
-        <p>Securely pay students after project completion.</p>
-      </div>
-    </div>
-  </div>
-</section>  
+  <!-- Clients Section -->
+  <section id="clients">
+    <div class="container">
+      <h3>For Clients</h3>
+      <div class="cards">
+     <div class="card">
+        <i class="fa fa-pencil-alt fa-2x"></i>
+        <h4>Post Briefs</h4>
+        <p>Easily share your project requirements with students.</p>
+      </div>
+      <div class="card">
+        <i class="fa fa-search fa-2x"></i>
+        <h4>Review Portfolios</h4>
+        <p>Check student portfolios to find the perfect match for your project.</p>
+      </div>
+      <div class="card">
+        <i class="fa fa-dollar-sign fa-2x"></i>
+        <h4>Pay Safely</h4>
+        <p>Securely pay students after project completion.</p>
+      </div>
+    </div>
+  </div>
+</section>  
 
-    <section id="pricing">
-    <div class="container">
-      <h3>Pricing</h3>
-      <div class="cards">
-        <div class="card">
-        <h4>Basic</h4>
-        <p>Free</p>
-        <p>Access to limited projects and profile</p>
-        <a href="#" class="btn-primary">Choose Plan</a>
-      </div>
-      <div class="card popular">
-        <h4>Pro</h4>
-        <p>₹99 / month</p>
-        <p>Unlimited projects & featured profile</p>
-        <a href="#" class="btn-primary">Choose Plan</a>
-      </div>
-      <div class="card">
-        <h4>Client</h4>
-        <p>Pay per project</p>
-        <p>Post projects and hire students easily</p>
-        <a href="#" class="btn-primary">Choose Plan</a>
-      </div>
-      </div>
-    </div>
-  </section>
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <div class="container">
+      <h3>Pricing</h3>
+      <div class="cards">
+        <div class="card">
+        <h4>Basic</h4>
+        <p>Free</p>
+        <p>Access to limited projects and profile</p>
+        <button class="btn-primary">Choose Plan</button>
+      </div>
+      <div class="card popular">
+        <h4>Pro</h4>
+        <p>₹99 / month</p>
+        <p>Unlimited projects & featured profile</p>
+        <button class="btn-primary">Choose Plan</button>
+      </div>
+      <div class="card">
+        <h4>Client</h4>
+        <p>Pay per project</p>
+        <p>Post projects and hire students easily</p>
+        <button class="btn-primary">Choose Plan</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="contact">
-    <div class="container">
-      <h3>Get In Touch</h3>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required aria-label="Your Name">
-        <input type="email" placeholder="Your Email" required aria-label="Your Email">
-        <textarea placeholder="Message" rows="4" required aria-label="Your Message"></textarea>
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
-    </div>
-  </section>
-  
-</div>
-    <footer>
-  <div class="container footer-container">
-    <div class="footer-left">
-      <h4><span>Skill</span> Linkr</h4>
-      <p>Connecting students with clients directly.</p>
-    </div>
-    <div class="footer-right">
-      <p>Follow us:</p>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Skill Linkr — All rights reserved.</p>
-  </div>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h3>Contact</h3>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" rows="4" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container footer-container">
+    <div class="footer-left">
+      <h4><span>Skill</span> Linkr</h4>
+      <p>Connecting students with clients directly.</p>
+    </div>
+    <div class="footer-right">
+      <p>Follow us:</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Skill Linkr — All rights reserved.</p>
+  </div>
 </footer>
-
-<script>
-  // DOM Elements
-  const loginModal = document.getElementById('login-modal');
-  const loginForm = document.getElementById('loginForm');
-  const loginMessage = document.getElementById('login-message');
-  const mainContent = document.getElementById('main-content');
-  const body = document.body;
-  const headerLoginBtn = document.getElementById('header-login-btn');
-  const emailInput = document.getElementById('login-email');
-  const passwordInput = document.getElementById('login-password');
-
-
-  // --- Functions to manage Login/Logout state using localStorage ---
-  function checkLoginStatus() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-
-    if (isLoggedIn) {
-      // Logged In State: Show everything
-      loginModal.style.display = 'none';
-      body.classList.add('logged-in');
-      body.classList.remove('logged-out');
-      headerLoginBtn.textContent = 'Logout';
-      headerLoginBtn.classList.remove('btn-secondary');
-      headerLoginBtn.classList.add('btn-primary');
-    } else {
-      // Logged Out State: Only show modal
-      loginModal.style.display = 'flex'; // Show modal
-      body.classList.remove('logged-in');
-      body.classList.add('logged-out');
-      // Note: Header/Main Content/Footer are hidden by default CSS unless .logged-in class is present.
-    }
-  }
-
-  function handleLogin() {
-    // SIMULATION: Set the flag
-    localStorage.setItem('isLoggedIn', 'true');
-    loginMessage.style.display = 'none'; // Hide error message on success
-    checkLoginStatus();
-  }
-
-  function handleLogout() {
-    // SIMULATION: Remove the flag
-    localStorage.removeItem('isLoggedIn');
-    checkLoginStatus();
-    alert('You have been successfully logged out!'); 
-  }
-
-  // --- Event Listeners ---
-
-  // 1. Initial Check on Page Load
-  document.addEventListener('DOMContentLoaded', () => {
-    checkLoginStatus();
-  });
-
-  // 2. Handle Login Form Submission
-  loginForm.addEventListener('submit', function(event) {
-    event.preventDefault(); 
-    
-    // Check if fields are filled
-    const email = emailInput.value;
-    const password = passwordInput.value;
-    
-    if (email.trim() !== '' && password.trim() !== '') {
-        handleLogin(); // Simulate successful login
-        loginForm.reset();
-    } else {
-        loginMessage.textContent = 'Please enter both email and password to continue.';
-        loginMessage.style.display = 'block';
-    }
-  });
-
-  // 3. Handle Header Login/Logout Button Click (This button is only visible when logged in)
-  headerLoginBtn.addEventListener('click', () => {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-
-    if (isLoggedIn) {
-      handleLogout(); // Logs out if currently logged in
-    } 
-    // If they are logged out, the button is not visible, and the modal is already showing.
-  });
-
-</script>
-
-</body>
 </html>
