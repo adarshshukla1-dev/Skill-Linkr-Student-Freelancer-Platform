@@ -32,12 +32,12 @@
         border-radius: 10px;
         width: 90%;
         max-width: 400px;
-        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
         text-align: center;
     }
 
     .modal-content h2 {
-        margin-bottom: 25px; /* Increased margin */
+        margin-bottom: 25px;
         color: #1a1a1a; 
     }
 
@@ -51,10 +51,10 @@
 
     #loginForm input {
         width: 100%;
-        padding: 14px; /* Increased padding */
-        margin-bottom: 20px; /* Increased margin */
+        padding: 14px;
+        margin-bottom: 20px;
         border: 1px solid #ccc;
-        border-radius: 8px; /* Rounded corners */
+        border-radius: 8px;
         box-sizing: border-box;
         font-size: 16px;
     }
@@ -67,17 +67,21 @@
         display: none;
     }
 
-    /* Hide the main content until login */
-    #main-content {
+    /* 🔑 Hiding Header, Footer, and Main Content by Default */
+    header, #main-content, footer {
         opacity: 0;
-        transition: opacity 0.5s ease-in-out; /* Smooth transition */
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out; 
         pointer-events: none;
+        height: 0; /* Ensures no scroll space is taken */
     }
-
-    /* Show the main content when the body has the 'logged-in' class */
-    .logged-in #main-content {
+    
+    /* 🔓 Showing everything when logged in */
+    .logged-in header, .logged-in #main-content, .logged-in footer {
         opacity: 1;
+        visibility: visible;
         pointer-events: auto;
+        height: auto;
     }
     
     /* Ensure primary/secondary buttons are styled correctly */
@@ -211,7 +215,7 @@
         <i class="fa fa-search fa-2x"></i>
         <h4>Review Portfolios</h4>
         <p>Check student portfolios to find the perfect match for your project.</p>
-      </div>
+        </div>
       <div class="card">
         <i class="fa fa-dollar-sign fa-2x"></i>
         <h4>Pay Safely</h4>
@@ -297,7 +301,7 @@
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
     if (isLoggedIn) {
-      // Logged In State
+      // Logged In State: Show everything
       loginModal.style.display = 'none';
       body.classList.add('logged-in');
       body.classList.remove('logged-out');
@@ -305,13 +309,11 @@
       headerLoginBtn.classList.remove('btn-secondary');
       headerLoginBtn.classList.add('btn-primary');
     } else {
-      // Logged Out State
+      // Logged Out State: Only show modal
       loginModal.style.display = 'flex'; // Show modal
       body.classList.remove('logged-in');
       body.classList.add('logged-out');
-      headerLoginBtn.textContent = 'Login';
-      headerLoginBtn.classList.remove('btn-primary');
-      headerLoginBtn.classList.add('btn-secondary');
+      // Note: Header/Main Content/Footer are hidden by default CSS unless .logged-in class is present.
     }
   }
 
@@ -326,7 +328,6 @@
     // SIMULATION: Remove the flag
     localStorage.removeItem('isLoggedIn');
     checkLoginStatus();
-    // Optional: Show a brief logout success message
     alert('You have been successfully logged out!'); 
   }
 
@@ -341,36 +342,27 @@
   loginForm.addEventListener('submit', function(event) {
     event.preventDefault(); 
     
-    // Enhanced Validation: Require non-empty inputs
+    // Check if fields are filled
     const email = emailInput.value;
     const password = passwordInput.value;
     
-    // NOTE: In a real app, you would send this to a backend API.
-    // For this demo, we check if fields are filled.
-    
     if (email.trim() !== '' && password.trim() !== '') {
-        // Successful attempt simulation
-        handleLogin();
+        handleLogin(); // Simulate successful login
         loginForm.reset();
     } else {
-        // Failed attempt simulation
         loginMessage.textContent = 'Please enter both email and password to continue.';
         loginMessage.style.display = 'block';
     }
   });
 
-  // 3. Handle Header Login/Logout Button Click
+  // 3. Handle Header Login/Logout Button Click (This button is only visible when logged in)
   headerLoginBtn.addEventListener('click', () => {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
     if (isLoggedIn) {
       handleLogout(); // Logs out if currently logged in
-    } else {
-      // Show login modal, reset state
-      loginModal.style.display = 'flex'; 
-      loginMessage.style.display = 'none';
-      loginForm.reset();
-    }
+    } 
+    // If they are logged out, the button is not visible, and the modal is already showing.
   });
 
 </script>
