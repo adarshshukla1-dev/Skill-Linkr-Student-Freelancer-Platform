@@ -32,29 +32,46 @@
         border-radius: 10px;
         width: 90%;
         max-width: 400px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
         text-align: center;
     }
 
     .modal-content h2 {
-        margin-bottom: 20px;
-        color: #333;
+        margin-bottom: 25px; /* Increased margin */
+        color: #1a1a1a; 
+    }
+
+    #loginForm label {
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: #555;
     }
 
     #loginForm input {
         width: 100%;
-        padding: 12px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
+        padding: 14px; /* Increased padding */
+        margin-bottom: 20px; /* Increased margin */
+        border: 1px solid #ccc;
+        border-radius: 8px; /* Rounded corners */
         box-sizing: border-box;
+        font-size: 16px;
     }
     
+    /* Login Error Message Style */
+    #login-message {
+        color: red;
+        margin-bottom: 15px;
+        font-weight: 600;
+        display: none;
+    }
+
     /* Hide the main content until login */
     #main-content {
         opacity: 0;
-        transition: opacity 0.5s;
-        pointer-events: none; /* Disables interaction */
+        transition: opacity 0.5s ease-in-out; /* Smooth transition */
+        pointer-events: none;
     }
 
     /* Show the main content when the body has the 'logged-in' class */
@@ -62,19 +79,47 @@
         opacity: 1;
         pointer-events: auto;
     }
+    
+    /* Ensure primary/secondary buttons are styled correctly */
+    .btn-primary {
+        background-color: #007bff; /* Example color */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .btn-secondary {
+        background-color: transparent;
+        color: #007bff;
+        border: 1px solid #007bff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
   </style>
 </head>
-<body>
+<body class="logged-out">
 
   <div id="login-modal" class="modal-overlay" style="display: none;">
     <div class="modal-content">
-      <h2>Skill Linkr Login</h2>
+      <h2>👋 Welcome to Skill Linkr</h2>
+      <p id="login-message">Invalid credentials. Please try again.</p>
+      
       <form id="loginForm">
-        <input type="email" placeholder="Email Address (Demo: any input works)" required>
-        <input type="password" placeholder="Password (Demo: any input works)" required>
-        <button type="submit" class="btn-primary">Login</button>
+        
+        <label for="login-email">Email Address</label>
+        <input type="email" id="login-email" placeholder="student@university.com" required>
+
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" placeholder="Enter your password" required>
+
+        <button type="submit" class="btn-primary" style="margin-top: 10px;">Secure Login</button>
       </form>
-      <p>Don't have an account? <a href="#">Sign Up</a></p>
+      <p style="margin-top: 20px;">Don't have an account? <a href="for-students.html">Sign Up as Student</a></p>
     </div>
   </div>
    <header>
@@ -85,11 +130,11 @@
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="for-students.html">For Students</a></li>
-          <li><a href="for-client.html">For Clients</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#students">For Students</a></li>
+          <li><a href="#clients">For Clients</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><a href="about.html">About Us</a></li>
                     <li><button id="header-login-btn" class="btn-secondary">Login</button></li> 
         </ul>
@@ -104,8 +149,8 @@
       <h2>Hire Talented Student Freelancers Directly</h2>
       <p>Skill Linkr connects students with clients — fast, affordable, and reliable.</p>
       <div class="hero-buttons">
-        <button class="btn-primary">Hire Now</button>
-        <button class="btn-secondary">Join as Student</button>
+        <a href="for-client.html" class="btn-primary">Hire Now</a>
+        <a href="for-students.html" class="btn-secondary">Join as Student</a>
       </div>
     </div>
   </section>
@@ -184,19 +229,19 @@
         <h4>Basic</h4>
         <p>Free</p>
         <p>Access to limited projects and profile</p>
-        <button class="btn-primary">Choose Plan</button>
+        <a href="#" class="btn-primary">Choose Plan</a>
       </div>
       <div class="card popular">
         <h4>Pro</h4>
         <p>₹99 / month</p>
         <p>Unlimited projects & featured profile</p>
-        <button class="btn-primary">Choose Plan</button>
+        <a href="#" class="btn-primary">Choose Plan</a>
       </div>
       <div class="card">
         <h4>Client</h4>
         <p>Pay per project</p>
         <p>Post projects and hire students easily</p>
-        <button class="btn-primary">Choose Plan</button>
+        <a href="#" class="btn-primary">Choose Plan</a>
       </div>
       </div>
     </div>
@@ -204,11 +249,11 @@
 
     <section id="contact">
     <div class="container">
-      <h3>Contact</h3>
+      <h3>Get In Touch</h3>
       <form id="contactForm">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Message" rows="4" required></textarea>
+        <input type="text" placeholder="Your Name" required aria-label="Your Name">
+        <input type="email" placeholder="Your Email" required aria-label="Your Email">
+        <textarea placeholder="Message" rows="4" required aria-label="Your Message"></textarea>
         <button type="submit" class="btn-primary">Send Message</button>
       </form>
     </div>
@@ -224,9 +269,9 @@
     <div class="footer-right">
       <p>Follow us:</p>
       <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
   </div>
@@ -239,9 +284,13 @@
   // DOM Elements
   const loginModal = document.getElementById('login-modal');
   const loginForm = document.getElementById('loginForm');
+  const loginMessage = document.getElementById('login-message');
   const mainContent = document.getElementById('main-content');
   const body = document.body;
   const headerLoginBtn = document.getElementById('header-login-btn');
+  const emailInput = document.getElementById('login-email');
+  const passwordInput = document.getElementById('login-password');
+
 
   // --- Functions to manage Login/Logout state using localStorage ---
   function checkLoginStatus() {
@@ -251,6 +300,7 @@
       // Logged In State
       loginModal.style.display = 'none';
       body.classList.add('logged-in');
+      body.classList.remove('logged-out');
       headerLoginBtn.textContent = 'Logout';
       headerLoginBtn.classList.remove('btn-secondary');
       headerLoginBtn.classList.add('btn-primary');
@@ -258,6 +308,7 @@
       // Logged Out State
       loginModal.style.display = 'flex'; // Show modal
       body.classList.remove('logged-in');
+      body.classList.add('logged-out');
       headerLoginBtn.textContent = 'Login';
       headerLoginBtn.classList.remove('btn-primary');
       headerLoginBtn.classList.add('btn-secondary');
@@ -267,6 +318,7 @@
   function handleLogin() {
     // SIMULATION: Set the flag
     localStorage.setItem('isLoggedIn', 'true');
+    loginMessage.style.display = 'none'; // Hide error message on success
     checkLoginStatus();
   }
 
@@ -274,6 +326,8 @@
     // SIMULATION: Remove the flag
     localStorage.removeItem('isLoggedIn');
     checkLoginStatus();
+    // Optional: Show a brief logout success message
+    alert('You have been successfully logged out!'); 
   }
 
   // --- Event Listeners ---
@@ -287,15 +341,21 @@
   loginForm.addEventListener('submit', function(event) {
     event.preventDefault(); 
     
-    // Simple check to ensure fields are filled
-    const email = loginForm.querySelector('input[type="email"]').value;
-    const password = loginForm.querySelector('input[type="password"]').value;
+    // Enhanced Validation: Require non-empty inputs
+    const email = emailInput.value;
+    const password = passwordInput.value;
     
-    if (email && password) {
-        handleLogin(); // Simulate successful login
+    // NOTE: In a real app, you would send this to a backend API.
+    // For this demo, we check if fields are filled.
+    
+    if (email.trim() !== '' && password.trim() !== '') {
+        // Successful attempt simulation
+        handleLogin();
         loginForm.reset();
     } else {
-        alert('Please enter both email and password.');
+        // Failed attempt simulation
+        loginMessage.textContent = 'Please enter both email and password to continue.';
+        loginMessage.style.display = 'block';
     }
   });
 
@@ -306,7 +366,10 @@
     if (isLoggedIn) {
       handleLogout(); // Logs out if currently logged in
     } else {
-      loginModal.style.display = 'flex'; // Shows modal if currently logged out
+      // Show login modal, reset state
+      loginModal.style.display = 'flex'; 
+      loginMessage.style.display = 'none';
+      loginForm.reset();
     }
   });
 
