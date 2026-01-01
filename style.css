@@ -19,7 +19,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.6;
+  line-height: 1.0;
 }
 
 .container {
