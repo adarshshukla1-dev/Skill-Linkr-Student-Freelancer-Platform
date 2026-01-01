@@ -1,4 +1,9 @@
- {
+.logo img {
+  height: 50px;   /* apne hisaab se */
+  width: auto;
+}
+
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
