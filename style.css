@@ -1,3 +1,91 @@
+/* =========================
+   GLOBAL RESET & VARIABLES
+========================= */
+:root {
+  --color-primary: #4F46E5;
+  --color-accent: #FACC15;
+  --color-bg: #F9FAFB;
+  --color-text: #1F2937;
+  --color-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   HEADER & NAVBAR (Mobile)
+========================= */
+header {
+  background: var(--color-white);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+.menu-toggle {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+/* Mobile menu */
+nav ul {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: var(--color-white);
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav ul.show {
+  display: flex;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--color-accent);
+}
 .logo img {
   height: 150px;   /* apne hisaab se */
   width: auto;
