@@ -3,86 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing | Skill Linkr</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Simple Transparent Pricing | Skill Linkr</title>
+  <meta name="description" content="Affordable pricing for student freelancers. Starter ₹499, Pro ₹999, Business ₹1999. No hidden fees.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="stylepricing.css">
 </head>
 <body>
-  <!-- Navbar -->
- <header>
-  <div class="menu-toggle">&#9776; </div>
-      <div class="container">
-   <div class="logo">
-  <img src="_Skill Linkr Personal Logo (1).png" alt="Logo">
-</div>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="_Skill Linkr Personal Logo (1).png" alt="Skill Linkr Logo">
+      </div>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
       <nav>
-        <ul>
-          <li><a href="dashboard.html">Home</a></li>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
           <li><a href="for-students.html">For Students</a></li>
           <li><a href="for-client.html">For Clients</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="pricing.html" class="active">Pricing</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="index.html">Log Out</a></li>
+          <li><a href="#" id="logout">Log Out</a></li>
         </ul>
       </nav>
     </div>
-</header>
-</body>
-  <!-- Hero -->
-  <section class="hero-pricing">
-    <h1>Simple, Transparent Pricing</h1>
-    <p>Hire top student freelancers affordably — no hidden fees, no hassle.</p>
-  </section>
+  </header>
 
-  <!-- Pricing Cards -->
-  <section class="pricing-section">
-    <div class="pricing-container">
-      <div class="pricing-card">
-        <h3>Starter</h3>
-        <h2>₹499</h2>
-        <p>Per Small Project</p>
-        <ul>
-          <li>✅ 1 Student Freelancer</li>
-          <li>✅ Quick Delivery</li>
-          <li>✅ Basic Support</li>
-        </ul>
-        <a href="contact.html" class="btn">Get Started</a>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-pricing">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Simple, Transparent Pricing</h1>
+        <p class="hero-subtitle">Choose the perfect plan for your project. No hidden fees. Pay only after satisfaction. Cancel anytime.</p>
+        <div class="pricing-switcher">
+          <div class="switcher-option active" data-plan="monthly">
+            <span>Monthly</span>
+          </div>
+          <div class="switcher-option" data-plan="yearly">
+            <span>Yearly <strong>(Save 20%)</strong></span>
+          </div>
+        </div>
       </div>
-
-      <div class="pricing-card popular">
-        <h3>Pro</h3>
-        <h2>₹999</h2>
-        <p>Per Mid-Level Project</p>
-        <ul>
-          <li>✅ Experienced Student Freelancer</li>
-          <li>✅ Priority Delivery</li>
-          <li>✅ 24/7 Support</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Choose Pro</a>
-      </div>
-
-      <div class="pricing-card">
-        <h3>Business</h3>
-        <h2>₹1999</h2>
-        <p>Per Advanced Project</p>
-        <ul>
-          <li>✅ Team of 2–3 Student Freelancers</li>
-          <li>✅ Fastest Turnaround</li>
-          <li>✅ Dedicated Manager</li>
-        </ul>
-        <a href="contact.html" class="btn">Hire Team</a>
+      <div class="hero-stats">
+        <div class="stat">
+          <h3>500+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat">
+          <h3>₹50L+</h3>
+          <p>Total Paid to Students</p>
+        </div>
+        <div class="stat">
+          <h3>100%</h3>
+          <p>Money-Back Guarantee</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Ready to Start Your Project?</h2>
-    <a href="contact.html" class="btn">Contact Us</a>
+  <!-- Pricing Cards -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <h2 class="section-title">Choose Your Perfect Plan</h2>
+      <div class="pricing-container">
+        <!-- Starter Plan -->
+        <div class="pricing-card starter monthly-pricing" data-price="499">
+          <div class="card-badge">
+            <i class="fas fa-crown"></i>
+            Best for Small Projects
+          </div>
+          <div class="card-header">
+            <h3>Starter</h3>
+            <div class="price">
+              <span class="currency">₹</span>
+              <span class="amount" data-monthly="499" data-yearly="399">499</span>
+              <span class="period">/project</span>
+            </div>
+            <div class="discount-badge yearly-only">
+              <span>Save ₹100/yearly</span>
+            </div>
+          </div>
+          <ul class="features-list">
+            <li><i class="fas fa-check"></i> 1 Verified Student Freelancer</li>
+            <li><i class="fas fa-check"></i> Basic Portfolio Review</li>
+            <li><i class="fas fa-check"></i> Standard Delivery (3-7 days)</li>
+            <li><i class="fas fa-check"></i> Email Support</li>
+            <li class="divider"></li>
+            <li><i class="fas fa-times"></i> Priority Support</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary">Get Started Free</a>
+        </div>
+
+        <!-- Pro Plan (Popular) -->
+        <div class="pricing-card pro monthly-pricing popular" data-price="999">
+          <div class="popular-badge">
+            <i class="fas fa-bolt"></i>
+            <span>Most Popular</span>
+          </div>
+          <div class="card-header">
+            <h3>Pro</h3>
+            <div class="price">
+              <span class="currency">₹</span>
+              <span class="amount" data-monthly="999" data-yearly="799">999</span>
+              <span class="period">/project</span>
+            </div>
+            <div class="discount-badge yearly-only">
+              <span>Save ₹200/yearly</span>
+            </div>
+          </div>
+          <ul class="features-list">
+            <li><i class="fas fa-check"></i> Experienced IIT/NIT Students</li>
+            <li><i class="fas fa-check"></i> Priority Project Matching</li>
+            <li><i class="fas fa-check"></i> Fast Delivery (1-3 days)</li>
+            <li><i class="fas fa-check"></i> 24/7 Priority Support</li>
+            <li><i class="fas fa-check"></i> Multiple Proposals</li>
+            <li><i class="fas fa-check"></i> Portfolio Priority</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Choose Pro Plan</a>
+        </div>
+
+        <!-- Business Plan -->
+        <div class="pricing-card business monthly-pricing" data-price="1999">
+          <div class="card-badge">
+            <i class="fas fa-users"></i>
+            For Large Projects
+          </div>
+          <div class="card-header">
+            <h3>Business</h3>
+            <div class="price">
+              <span class="currency">₹</span>
+              <span class="amount" data-monthly="1999" data-yearly="1599">1999</span>
+              <span class="period">/project</span>
+            </div>
+            <div class="discount-badge yearly-only">
+              <span>Save ₹400/yearly</span>
+            </div>
+          </div>
+          <ul class="features-list">
+            <li><i class="fas fa-check"></i> Team of 2-3 Top Students</li>
+            <li><i class="fas fa-check"></i> Dedicated Project Manager</li>
+            <li><i class="fas fa-check"></i> Same Day Delivery</li>
+            <li><i class="fas fa-check"></i> Phone + Chat Support</li>
+            <li><i class="fas fa-check"></i> Unlimited Revisions</li>
+            <li><i class="fas fa-check"></i> Source Files Included</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary">Hire Team Now</a>
+        </div>
+      </div>
+      
+      <!-- Pricing FAQ -->
+      <div class="pricing-faq">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4>🆓 Is posting projects free?</h4>
+            <p>Yes! Post unlimited projects free. Pay only after approving completed work.</p>
+          </div>
+          <div class="faq-item">
+            <h4>💰 When do I pay students?</h4>
+            <p>Funds held securely until you approve work. Pay only when 100% satisfied.</p>
+          </div>
+          <div class="faq-item">
+            <h4>🔒 Is my payment secure?</h4>
+            <p>100% secure payments with money-back guarantee if work doesn't meet expectations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- CTA Section -->
+  <section id="contact" class="cta-pricing">
+    <div class="container">
+      <h2>Not Sure Which Plan? Let's Talk!</h2>
+      <p>Get personalized recommendations for your project requirements.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary btn-large">Get Free Consultation</a>
+        <a href="#pricing" class="btn btn-secondary btn-large">Compare Plans</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Skill Linkr | Designed with ❤️ for students & clients</p>
+    <div class="container footer-container">
+      <div class="footer-left">
+        <h4><span>Skill</span> Linkr</h4>
+        <p>Transparent pricing for quality student talent. No hidden fees. Satisfaction guaranteed.</p>
+      </div>
+      <div class="footer-right">
+        <p>Follow us:</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/radheyvallabh8/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Skill Linkr — All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
   </footer>
+
+  <script src="scriptpricing.js"></script>
 </body>
 </html>
