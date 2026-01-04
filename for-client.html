@@ -1,86 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For Clients | Skill Linkr</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Hire talented student freelancers at affordable rates. Fast delivery, quality work, secure payments.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styleclient.css">
 </head>
 <body>
-  <!-- Navbar (same as other pages) -->
- <header>
-  <div class="menu-toggle">&#9776; </div>
-      <div class="container">
-  <div class="logo">
-  <img src="_Skill Linkr Personal Logo (1).png" alt="Logo">
-</div>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="_Skill Linkr Personal Logo (1).png" alt="Skill Linkr Logo">
+      </div>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
       <nav>
-        <ul>
-          <li><a href="dashboard.html">Home</a></li>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
           <li><a href="for-students.html">For Students</a></li>
-          <li><a href="for-client.html">For Clients</a></li>
+          <li><a href="for-clients.html" class="active">For Clients</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="index.html">Log Out</a></li>
+          <li><a href="#" id="logout">Log Out</a></li>
         </ul>
       </nav>
     </div>
-</header>
-</body>
+  </header>
+
   <!-- Hero Section -->
-  <section class="hero-clients">
-    <h1>Hire Talented Student Freelancer at Affordable Rates</h1>
-    <p>Get your projects done quickly by skilled student freelancers — smart, creative, and ready to deliver.</p>
-    <a href="contact.html" class="btn">Hire Now</a>
+  <section id="hero" class="hero-clients">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Hire Top Student Talent at 50% Lower Rates</h1>
+        <p>Join 1000+ businesses getting professional work from IIT/NIT students at startup-friendly prices.</p>
+        <div class="hero-buttons">
+          <a href="#post-project" class="btn-primary">Post Project Free</a>
+          <a href="#features" class="btn-secondary">See How It Works</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <h3>₹15K</h3>
+          <p>Avg. Project Cost (vs ₹50K agency)</p>
+        </div>
+        <div class="stat">
+          <h3>48 hrs</h3>
+          <p>Avg. First Proposal</p>
+        </div>
+        <div class="stat">
+          <h3>4.9⭐</h3>
+          <p>Client Satisfaction</p>
+        </div>
+        <div class="stat">
+          <h3>2000+</h3>
+          <p>Projects Delivered</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Why Choose Section -->
-  <section class="why-clients">
-    <h2>Why Choose Skill Linkr?</h2>
-    <div class="benefit-grid">
-      <div class="card">
-        <h3>⚡ Fast Turnaround</h3>
-        <p>Student freelancer deliver projects quickly with full focus and energy.</p>
-      </div>
-      <div class="card">
-        <h3>💰 Cost-Effective</h3>
-        <p>Get top-quality work at a fraction of agency or pro freelancer rates.</p>
-      </div>
-      <div class="card">
-        <h3>🌟 Fresh Talent</h3>
-        <p>Access a pool of motivated student freelancer who bring new ideas to your projects.</p>
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Why 1000+ Businesses Choose Skill Linkr</h2>
+      <div class="cards">
+        <div class="card feature-card">
+          <div class="card-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Lightning Fast Delivery</h3>
+          <p>Students deliver 2-3x faster than agencies. Perfect for tight deadlines and urgent projects.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="card-icon">
+            <i class="fas fa-rupee-sign"></i>
+          </div>
+          <h3>60-80% Cost Savings</h3>
+          <p>Professional quality at student rates. Save ₹20K-₹1L per project compared to agencies.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="card-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Fresh Creative Ideas</h3>
+          <p>India's brightest IIT/NIT students bring innovative solutions and modern approaches.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="card-icon">
+            <i class="fas fa-infinity"></i>
+          </div>
+          <h3>Zero Risk Guarantee</h3>
+          <p>Pay only after approval. Full refund if not 100% satisfied with delivered work.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- How It Works -->
-  <section class="steps">
-    <h2>How It Works</h2>
-    <div class="steps-grid">
-      <div class="step">
-        <h3>1. Post Your Project</h3>
-        <p>Share what you need — design, video editing, content, or coding.</p>
+  <section class="steps-section alt-bg">
+    <div class="container">
+      <h2>Complete Your Project in 3 Simple Steps</h2>
+      <div class="step-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Post Project Free</h3>
+          <p>Create detailed brief (budget, timeline, requirements). Takes 2 minutes. No upfront payment.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Review Proposals</h3>
+          <p>Get proposals from verified IIT/NIT students with portfolios, rates & timelines.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Hire & Pay Securely</h3>
+          <p>Approve completed work. Funds released automatically. Pay only when satisfied.</p>
+        </div>
       </div>
-      <div class="step">
-        <h3>2. Get Matched</h3>
-        <p>We connect you to verified student freelancers with the right skills.</p>
-      </div>
-      <div class="step">
-        <h3>3. Review & Pay</h3>
-        <p>Approve the work and release secure payments directly through Skill Linkr.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Clients Are Saying</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Got a complete website for ₹12K in 5 days! Better than ₹50K agency quotes. Amazing quality."</p>
+          <div class="author">
+            <img src="https://via.placeholder.com/50x50/667eea/fff?text=RS" alt="Rahul S">
+            <div>
+              <h4>Rahul Sharma</h4>
+              <span>Startup Founder, TechStartup</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Saved ₹80K vs agency pricing. IIT student delivered better design than expected. Highly recommend!"</p>
+          <div class="author">
+            <img src="https://via.placeholder.com/50x50/ff6b6b/fff?text=AP" alt="Anita P">
+            <div>
+              <h4>Anita Patel</h4>
+              <span>Marketing Manager, BrandX</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Mobile app prototype in 3 days for ₹18K. Student from NIT was professional and delivered early."</p>
+          <div class="author">
+            <img src="https://via.placeholder.com/50x50/4facfe/fff?text=VK" alt="Vikram K">
+            <div>
+              <h4>Vikram Kumar</h4>
+              <span>Product Manager, FinTech Co.</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="cta">
-    <h2>Ready to Hire Your First Student Freelancer?</h2>
-    <a href="contact.html" class="btn">Get Started</a>
+  <section id="post-project" class="cta">
+    <div class="container">
+      <h2>Ready to Hire Your First Student Freelancer?</h2>
+      <p>Join 1000+ businesses getting quality work at 50% lower cost. Post free, pay only when satisfied.</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn-primary btn-large">Post Project Free →</a>
+        <a href="#features" class="btn-secondary btn-large">See Student Profiles</a>
+      </div>
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Skill Linkr | Connecting Student Freelancers with Clients</p>
+    <div class="container footer-container">
+      <div class="footer-left">
+        <h4><span>Skill</span> Linkr</h4>
+        <p>Connecting businesses with India's brightest student talent. Quality work. Startup prices. Fast delivery.</p>
+      </div>
+      <div class="footer-right">
+        <p>Follow us:</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/radheyvallabh8/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Skill Linkr — All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="scriptclient.js"></script>
 </body>
 </html>
