@@ -1,3 +1,18 @@
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const user = document.querySelector('input[name="username"]').value;
+  const pass = document.querySelector('input[name="password"]').value;
+
+  if (user === "admin" && pass === "1234") {
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Invalid login details");
+  }
+});
+</script>
+
 /* =========================
    Mobile Menu Toggle
 ========================= */
