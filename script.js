@@ -1,33 +1,64 @@
+/* =========================
+   Mobile Menu Toggle
+========================= */
 const menuToggle = document.querySelector('.menu-toggle');
 const navUl = document.querySelector('nav ul');
 
-menuToggle.addEventListener('click', () => {
-  navUl.classList.toggle('show');
-});
-document.querySelectorAll('nav ul li a').forEach(link => 
-  {
-  link.addEventListener('click', function(e) 
-                        {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
-    // Close mobile menu after click
-    navUl.classList.remove('show');
+if (menuToggle && navUl) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navUl.classList.toggle('show');
+    menuToggle.setAttribute('aria-expanded', isOpen);
   });
+}
+
+/* =========================
+   Smooth Scroll + Menu Close
+========================= */
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('nav ul li a');
+  if (!link) return;
+
+  const targetId = link.getAttribute('href');
+  if (!targetId || !targetId.startsWith('#')) return;
+
+  const targetSection = document.querySelector(targetId);
+  if (!targetSection) return;
+
+  e.preventDefault();
+  targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // Close mobile menu
+  navUl?.classList.remove('show');
+  menuToggle?.setAttribute('aria-expanded', false);
 });
-//Contact Form Submission
+
+/* =========================
+   Contact Form Submission
+========================= */
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Form submitted successfully! We will contact you soon.');
-  contactForm.reset();
-});
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-// Scroll reveal animation
+    // Simple UX feedback
+    alert('Form submitted successfully! We will contact you soon.');
+
+    contactForm.reset();
+  });
+}
+
+/* =========================
+   Scroll Reveal Animation
+========================= */
 const sections = document.querySelectorAll('section');
 
-const revealSection = (entries, observer) => {
+const observerOptions = {
+  threshold: 0.15,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const revealOnScroll = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
@@ -36,14 +67,17 @@ const revealSection = (entries, observer) => {
   });
 };
 
-const observer = new IntersectionObserver(revealSection, {
-  threshold: 0.15
-});
+const sectionObserver = new IntersectionObserver(revealOnScroll, observerOptions);
 
 sections.forEach(section => {
   section.classList.add('hidden');
-  observer.observe(section);
+  sectionObserver.observe(section);
 });
+
+/* =========================
+   Page Load Animation
+========================= */
 window.addEventListener('load', () => {
   document.body.classList.add('loaded');
 });
+
