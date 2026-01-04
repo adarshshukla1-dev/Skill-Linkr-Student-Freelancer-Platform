@@ -3,117 +3,277 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> About Us | Skill Linkr</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>About Us | Skill Linkr - Empowering Student Talent</title>
+  <meta name="description" content="Learn about Skill Linkr's mission to empower students through freelancing opportunities and connect businesses with affordable talent.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styleabout.css">
 </head>
-  <!-- Navbar (same as index.html) -->
- <body>
- <header>
-  <div class="menu-toggle">&#9776; </div>
-      <div class="container">
-   <div class="logo">
-  <img src="_Skill Linkr Personal Logo (1).png" alt="Logo">
-</div>
-      <nav>
-        <ul>
+<body>
+  <!-- Navbar -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="_Skill Linkr Personal Logo (1).png" alt="Skill Linkr Logo">
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav">
+        <ul id="nav-menu">
           <li><a href="dashboard.html">Home</a></li>
           <li><a href="for-students.html">For Students</a></li>
           <li><a href="for-client.html">For Clients</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="index.html">Log Out</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="index.html" id="logout">Log Out</a></li>
         </ul>
       </nav>
     </div>
-</header>
-  </body>
-  <!-- Hero -->
+  </header>
+
+  <!-- Hero Section -->
   <section class="hero-about">
-    <h1>About Skill Linkr</h1>
-    <p>Empowering Students. Supporting Clients. Building Futures.</p>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-heart"></i>
+          <span>Our Story</span>
+        </div>
+        <h1>About <span>Skill Linkr</span></h1>
+        <p class="hero-subtitle">
+          Empowering students to earn, learn, and grow while connecting businesses 
+          with affordable, quality talent from India's top colleges.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">₹50L+</div>
+            <div class="stat-label">Paid to Students</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Story Section -->
   <section class="about-story">
     <div class="container">
-      <h2>Our Story</h2>
-      <p>
-        Skill Linkr is founded with a simple idea — to give talented students a
-        fair chance to earn, grow & prove their skills through real-world
-        projects. Many students struggle to find opportunities despite having
-        the right talent & small businesses or startups struggle to afford
-        skilled freelancers.
-      </p>
-      <p>
-        Skill Linkr bridges that gap by connecting student freelancers directly
-        with clients at minimal prices — creating a win-win ecosystem for both.
-      </p>
+      <div class="story-content">
+        <div class="story-text">
+          <h2>Our Journey</h2>
+          <p class="story-lead">
+            Founded with a simple yet powerful idea: <strong>talented students deserve real opportunities</strong>, 
+            and businesses deserve <strong>affordable quality talent</strong>.
+          </p>
+          <div class="story-points">
+            <div class="story-point">
+              <div class="point-number">01</div>
+              <p>Students struggle to find freelance work despite having IIT/NIT-level skills</p>
+            </div>
+            <div class="story-point">
+              <div class="point-number">02</div>
+              <p>Small businesses can't afford expensive freelancers</p>
+            </div>
+            <div class="story-point">
+              <div class="point-number">03</div>
+              <p>Skill Linkr bridges this gap with transparent pricing</p>
+            </div>
+          </div>
+          <blockquote class="story-quote">
+            <i class="fas fa-quote-left"></i>
+            <p>"Learning by doing is the best education. Skill Linkr makes it possible."</p>
+            <cite>— Adarsh Shukla, Founder</cite>
+          </blockquote>
+        </div>
+        <div class="story-visual">
+          <div class="visual-circle">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Mission & Vision -->
   <section class="about-mission">
     <div class="container">
-      <h2>Our Mission & Vision</h2>
+      <div class="section-header">
+        <h2>Our Purpose</h2>
+        <p>Guided by clear values and ambitious goals</p>
+      </div>
       <div class="mission-grid">
-        <div class="mission-card">
-          <h3>🎯 Mission</h3>
+        <div class="mission-card mission">
+          <div class="mission-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Mission</h3>
           <p>
-            To create a platform where every student can showcase their skills,
-            earn income, and gain real experience while studying.
+            Create opportunities for every talented student to <strong>earn while learning</strong>, 
+            gain real-world experience, and build their professional portfolio.
           </p>
         </div>
-        <div class="mission-card">
-          <h3>🚀 Vision</h3>
+        <div class="mission-card vision">
+          <div class="mission-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Vision</h3>
           <p>
-            To become India’s largest student-powered freelance community —
-            where learning meets earning.
+            Become <strong>India's #1 student freelance platform</strong> — where 
+            education meets entrepreneurship at scale.
           </p>
         </div>
       </div>
     </div>
   </section>
-<section class="founder">
-  <div class="container founder-box">
-    <img src="ADARSH1.jpg" alt="Adarsh Shukla" class="founder-img" />
 
-    <div class="founder-text">
-      <h2>Meet Our Founder</h2>
-      <h3>Adarsh Shukla</h3>
+  <!-- Stats Section -->
+  <section class="about-stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-number" data-target="500">0</div>
+          <div class="stat-label">Active Students</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="stat-number" data-target="250">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Top Colleges</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="stat-number" data-target="98">0</div>
+          <div class="stat-label">% Success Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <!-- Connect with Founder -->
-      <div class="founder-social">
-        <span>Connect with Founder</span>
-        <a
-          href="https://www.instagram.com/radheyvallabh8/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="insta-link"
-        >
-          @radheyvallabh8
-          <i class="fab fa-instagram"></i>
+  <!-- Founder Section -->
+  <section class="founder-section">
+    <div class="container">
+      <div class="founder-container">
+        <div class="founder-image">
+          <img src="ADARSH1.jpg" alt="Adarsh Shukla - Founder of Skill Linkr" loading="lazy">
+          <div class="image-overlay">
+            <div class="overlay-content">
+              <i class="fab fa-instagram"></i>
+              <a href="https://www.instagram.com/radheyvallabh8/" target="_blank" rel="noopener noreferrer">
+                Follow @radheyvallabh8
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="founder-content">
+          <h2>Meet the Visionary</h2>
+          <h3>Adarsh Shukla</h3>
+          <div class="founder-role">
+            <span>Founder & CEO</span>
+            <div class="role-highlight">
+              <i class="fas fa-crown"></i>
+              <span>Computer Science Student</span>
+            </div>
+          </div>
+          
+          <p class="founder-bio">
+            Adarsh is not just building a platform — he's creating a movement. 
+            As a fellow student entrepreneur, he understands the struggle of 
+            balancing academics with real-world experience.
+          </p>
+          
+          <div class="founder-stats">
+            <div class="founder-stat">
+              <div class="stat-value">2+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="founder-stat">
+              <div class="stat-value">50+</div>
+              <div class="stat-label">Students Mentored</div>
+            </div>
+            <div class="founder-stat">
+              <div class="stat-value">100%</div>
+              <div class="stat-label">Passion Driven</div>
+            </div>
+          </div>
+          
+          <blockquote class="founder-quote">
+            "Every student deserves a platform to prove their worth. Skill Linkr is that opportunity."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="about-cta">
+    <div class="container">
+      <h2>Ready to Join the Movement?</h2>
+      <p>Whether you're a student ready to showcase your skills or a business looking for talent...</p>
+      <div class="cta-buttons">
+        <a href="for-students.html" class="btn btn-primary">
+          <i class="fas fa-graduation-cap"></i>
+          For Students
+        </a>
+        <a href="for-client.html" class="btn btn-secondary">
+          <i class="fas fa-briefcase"></i>
+          For Clients
         </a>
       </div>
-
-      <p>
-        Adarsh is a passionate Computer Science student, entrepreneur, and
-        founder of Skill Linkr. His mission is to empower students like
-        himself to gain confidence, financial independence, and professional
-        growth through freelancing.
-      </p>
-
-      <p>
-        He believes that true education happens when skills meet
-        opportunities — and Skill Linkr is his step toward that vision.
-      </p>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <footer>
-    <p>© 2025 Skill Linkr | Created with ❤️ by Adarsh Shukla</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h4><span>Skill</span> Linkr</h4>
+          <p>Empowering the next generation of Indian talent. One project at a time.</p>
+        </div>
+        <div class="footer-right">
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/radheyvallabh8/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Skill Linkr — Built with ❤️ by Adarsh Shukla | All rights reserved</p>
+      </div>
+    </div>
   </footer>
+
+  <script src="about-scriptabout.js"></script>
 </body>
 </html>
