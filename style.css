@@ -7,15 +7,12 @@
   --bg: #F9FAFB;
   --text: #1F2937;
   --white: #ffffff;
-  --shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* =========================
    RESET
 ========================= */
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,7 +23,7 @@
 ========================= */
 body {
   font-family: 'Poppins', sans-serif;
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
@@ -50,13 +47,13 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 header .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo img {
@@ -64,10 +61,10 @@ header .container {
 }
 
 .menu-toggle {
+  display: none;
   font-size: 1.6rem;
   cursor: pointer;
   color: var(--primary);
-  display: none;
 }
 
 nav ul {
@@ -78,9 +75,8 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  font-weight: 500;
   color: var(--text);
-  transition: color 0.3s;
+  font-weight: 500;
 }
 
 nav ul li a:hover,
@@ -93,11 +89,11 @@ nav ul li a.active {
 ========================= */
 .hero {
   min-height: 80vh;
+  background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
 }
 
 .hero h2 {
@@ -108,8 +104,8 @@ nav ul li a.active {
 
 .hero p {
   max-width: 600px;
-  margin-bottom: 30px;
   color: #374151;
+  margin-bottom: 30px;
 }
 
 .hero-buttons {
@@ -128,7 +124,7 @@ nav ul li a.active {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .btn-primary {
@@ -139,7 +135,6 @@ nav ul li a.active {
 
 .btn-primary:hover {
   background: #3730a3;
-  transform: translateY(-3px);
 }
 
 .btn-secondary {
@@ -151,11 +146,10 @@ nav ul li a.active {
 .btn-secondary:hover {
   background: var(--primary);
   color: var(--white);
-  transform: translateY(-3px);
 }
 
 /* =========================
-   CARDS (Universal)
+   CARDS (COMMON)
 ========================= */
 .cards {
   display: flex;
@@ -167,15 +161,14 @@ nav ul li a.active {
 .card {
   background: var(--white);
   padding: 30px 20px;
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  flex: 1 1 260px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex: 1 1 250px;
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
 }
 
 .card h4 {
@@ -204,8 +197,8 @@ textarea {
 
 input:focus,
 textarea:focus {
-  outline: none;
   border-color: var(--primary);
+  outline: none;
 }
 
 /* =========================
@@ -218,12 +211,12 @@ footer {
 }
 
 footer .footer-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
-  max-width: 1200px;
-  margin: auto;
 }
 
 footer h4 span {
@@ -234,19 +227,12 @@ footer h4 span {
   color: var(--white);
   margin-right: 15px;
   font-size: 1.4rem;
-  transition: all 0.3s;
-}
-
-.social-icons a:hover {
-  color: var(--accent);
-  transform: translateY(-3px);
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 25px;
   font-size: 0.9rem;
-  opacity: 0.9;
 }
 
 /* =========================
@@ -266,7 +252,7 @@ footer h4 span {
     background: var(--white);
     padding: 15px;
     border-radius: 10px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
   nav ul.show {
@@ -282,8 +268,8 @@ footer h4 span {
   }
 
   footer .footer-container {
-    text-align: center;
     justify-content: center;
+    text-align: center;
   }
 }
 
