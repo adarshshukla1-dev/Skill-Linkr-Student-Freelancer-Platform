@@ -6,39 +6,38 @@
   <title>Skill Linkr - Student Freelancer Platform</title>
   <meta name="description" content="Skill Linkr connects student freelancers directly with clients — fast, affordable, and reliable.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
- <body>
- <header>
-  <div class="menu-toggle">&#9776; </div>
-      <div class="container">
-        <div class="logo">
-  <img src="_Skill Linkr Personal Logo (1).png" alt="Logo">
-</div>
-
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="_Skill Linkr Personal Logo (1).png" alt="Skill Linkr Logo">
+      </div>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
       <nav>
-        <ul>
-          <li><a href="dashboard.html">Home</a></li>
-          <li><a href="for-students.html">For Students</a></li>
-          <li><a href="for-client.html">For Clients</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="index.html">Log Out</a></li>
+        <ul id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#students">For Students</a></li>
+          <li><a href="#clients">For Clients</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" id="logout">Log Out</a></li>
         </ul>
       </nav>
     </div>
-</header>
-  </body>
+  </header>
+
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="container">
       <h2>Hire Talented Student Freelancers Directly</h2>
-      <p>Skill Linkr connects students with clients — fast, affordable & reliable.</p>
+      <p>Skill Linkr connects students with clients — fast, affordable & reliable. Get quality work at student prices with professional results.</p>
       <div class="hero-buttons">
-        <button class="btn-primary">Hire Now</button>
-        <button class="btn-secondary">Join as Student Freelancer</button>
+        <a href="#clients" class="btn-primary">Hire Now</a>
+        <a href="#students" class="btn-secondary">Join as Student</a>
       </div>
     </div>
   </section>
@@ -49,104 +48,107 @@
       <h3>How It Works</h3>
       <div class="cards">
         <div class="card">
-          <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-upload fa-2x"></i>
           <h4>1. Post Project</h4>
-          <p>Clients post their project briefs easily.</p>
+          <p>Clients post detailed project briefs with budget and timeline. Students see your requirements instantly.</p>
         </div>
         <div class="card">
+          <i class="fa fa-users fa-2x"></i>
           <h4>2. Students Apply</h4>
-          <p>Students submit proposals with portfolios.</p>
+          <p>Verified students submit proposals with portfolios, rates, and timelines tailored to your project.</p>
         </div>
         <div class="card">
-          <h4>3. Hire & Pay</h4>
-          <p>Clients hire, collaborate, and release payment securely.</p>
+          <i class="fa fa-handshake fa-2x"></i>
+          <h4>3. Hire & Pay Securely</h4>
+          <p>Review proposals, hire your choice, collaborate in-platform, and release payment only after satisfaction.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Students Section -->
-  <section id="students">
+  <section id="students" class="alt-bg">
     <div class="container">
       <h3>For Students</h3>
       <div class="cards">
         <div class="card">
-        <i class="fa fa-user fa-2x"></i>
+          <i class="fa fa-user-graduate fa-2x"></i>
           <h4>Create Profile</h4>
-        <p>Build a portfolio showcasing your skills and projects.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-briefcase fa-2x"></i>
-        <h4>Apply to Projects</h4>
-        <p>Find freelance projects and submit proposals easily.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-check-circle fa-2x"></i>
-        <h4>Get Verified</h4>
-        <p>Earn credibility and boost your chances of getting hired.</p>
+          <p>Build a stunning portfolio showcasing skills, projects, certifications, and availability.</p>
+        </div>
+        <div class="card">
+          <i class="fa fa-briefcase fa-2x"></i>
+          <h4>Browse Projects</h4>
+          <p>Discover relevant freelance opportunities matching your skills and experience level.</p>
+        </div>
+        <div class="card">
+          <i class="fa fa-medal fa-2x"></i>
+          <h4>Get Verified & Featured</h4>
+          <p>Complete verification, earn badges, and get featured to attract more clients.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
   <!-- Clients Section -->
   <section id="clients">
     <div class="container">
       <h3>For Clients</h3>
       <div class="cards">
-     <div class="card">
-        <i class="fa fa-pencil-alt fa-2x"></i>
-        <h4>Post Briefs</h4>
-        <p>Easily share your project requirements with students.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-search fa-2x"></i>
-        <h4>Review Portfolios</h4>
-        <p>Check student portfolios to find the perfect match for your project.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-dollar-sign fa-2x"></i>
-        <h4>Pay Safely</h4>
-        <p>Securely pay students after project completion.</p>
+        <div class="card">
+          <i class="fa fa-edit fa-2x"></i>
+          <h4>Post Projects Free</h4>
+          <p>Create detailed briefs with budget, timeline, and requirements in minutes.</p>
+        </div>
+        <div class="card">
+          <i class="fa fa-search fa-2x"></i>
+          <h4>Review Top Talent</h4>
+          <p>Access student portfolios, ratings, reviews, and proposals to find perfect matches.</p>
+        </div>
+        <div class="card">
+          <i class="fa fa-shield-alt fa-2x"></i>
+          <h4>Secure Payments</h4>
+          <p>Funds held securely until project completion and client satisfaction.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>  
+  </section>  
 
   <!-- Pricing Section -->
-  <section id="pricing">
+  <section id="pricing" class="alt-bg">
     <div class="container">
-      <h3>Pricing</h3>
+      <h3>Simple Pricing</h3>
       <div class="cards">
         <div class="card">
-        <h4>Basic</h4>
-        <p>Free</p>
-        <p>Access to limited projects and profile</p>
-        <button class="btn-primary">Choose Plan</button>
-      </div>
-      <div class="card popular">
-        <h4>Pro</h4>
-        <p>₹99 / month</p>
-        <p>Unlimited projects & featured profile</p>
-        <button class="btn-primary">Choose Plan</button>
-      </div>
-      <div class="card">
-        <h4>Client</h4>
-        <p>Pay per project</p>
-        <p>Post projects and hire students easily</p>
-        <button class="btn-primary">Choose Plan</button>
+          <h4>Student Basic</h4>
+          <p>Free Forever</p>
+          <p>Apply to 5 projects/month, basic profile</p>
+          <button class="btn-primary">Get Started</button>
+        </div>
+        <div class="card popular">
+          <h4>Student Pro</h4>
+          <p>₹99 / month</p>
+          <p>Unlimited applications, featured profile, priority support</p>
+          <button class="btn-primary">Choose Pro</button>
+        </div>
+        <div class="card">
+          <h4>Client Pro</h4>
+          <p>Pay Per Project</p>
+          <p>Unlimited postings, advanced matching, dedicated support</p>
+          <button class="btn-primary">Post Project</button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
-      <h3>Contact</h3>
+      <h3>Get In Touch</h3>
       <form id="contactForm">
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Message" rows="4" required></textarea>
+        <textarea placeholder="Tell us about your project or join request" rows="5" required></textarea>
         <button type="submit" class="btn-primary">Send Message</button>
       </form>
     </div>
@@ -154,27 +156,28 @@
 
   <!-- Footer -->
   <footer>
-  <div class="container footer-container">
-    <div class="footer-left">
-      <h4><span>Skill</span> Linkr</h4>
-      <p>Connecting students with clients directly.</p>
-    </div>
-    <div class="footer-right">
-      <p>Follow us:</p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-       <a href="https://www.instagram.com/radheyvallabh8/" target="_blank">
-       <i class="fab fa-instagram"></i>
-       </a>
-
-
+    <div class="container footer-container">
+      <div class="footer-left">
+        <h4><span>Skill</span> Linkr</h4>
+        <p>Connecting student talent with real projects. Fast. Affordable. Reliable.</p>
+      </div>
+      <div class="footer-right">
+        <p>Follow us:</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/radheyvallabh8/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Skill Linkr — All rights reserved.</p>
-  </div>
-</footer>
+    <div class="footer-bottom">
+      <p>© 2026 Skill Linkr — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
