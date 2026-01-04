@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (username === demoEmail && password === demoPassword) {
         showNotification('Login successful! Redirecting...', 'success');
         setTimeout(() => {
-          window.location.href = 'dashboard.html';
+          window.location.href = 'index.html';
         }, 1500);
       } else {
         throw new Error('Invalid credentials');
