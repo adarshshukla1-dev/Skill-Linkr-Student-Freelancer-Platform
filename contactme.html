@@ -3,74 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Contact Us | Skill Linkr</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Contact Us | Skill Linkr</title>
+  <meta name="description" content="Contact Skill Linkr for student freelance services. Email, phone, and contact form available.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="stylecontact.css">
 </head>
-  <!-- Navbar (same as index.html) -->
- <body>
- <header>
-  <div class="menu-toggle">&#9776; </div>
-      <div class="container">
-   <div class="logo">
-  <img src="_Skill Linkr Personal Logo (1).png" alt="Logo">
-</div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">For Students</a></li>
-          <li><a href="index.html">For Clients</a></li>
-          <li><a href="pricings.html">Pricing</a></li>
-          <li><a href="contactme.html">Contact</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="index.html">Log Out</a></li>
+<body>
+  <!-- Navbar -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="_Skill Linkr Personal Logo (1).png" alt="Skill Linkr Logo">
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav">
+        <ul id="nav-menu">
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="for-students.html">For Students</a></li>
+          <li><a href="for-client.html">For Clients</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html" id="logout">Log Out</a></li>
         </ul>
       </nav>
     </div>
-</header>
-  </body>
-  
-  <!-- Hero -->
+  </header>
+
+  <!-- Hero Section -->
   <section class="hero-contact">
-    <h1>Contact Us</h1>
-    <p>Have a question or a project in mind? Let’s connect!</p>
-  </section>
-
-  <!-- Contact Form Section -->
-  <section class="contact-section">
-    <div class="contact-container">
-      <!-- Form -->
-      <div class="contact-form">
-        <h2>Send a Message</h2>
-        <form id="contactForm" action="#" method="POST">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required>
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your email" required>
-
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Subject" required>
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-      </div>
-
-      <!-- Info -->
-      <div class="contact-info">
-        <h2>Get in Touch</h2>
-        <p><strong>Email:</strong> skilllinkr@gmail.com</p>
-        <p><strong>Phone:</strong> +91 9694793883</p>
-        <p><strong>Location:</strong> Gonda, Uttar Pradesh</p>
-        <p>We usually reply within 24 hours.</p>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Let's Connect</h1>
+        <p class="hero-subtitle">Ready to hire top student talent or have questions? We're here to help!</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <i class="fas fa-users"></i>
+            <span>500+</span>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat">
+            <i class="fas fa-reply-all"></i>
+            <span>24h</span>
+            <p>Response Time</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Skill Linkr | Built with ❤️ for Students & Clients</p>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <div class="form-header">
+            <h2>Send Message</h2>
+            <div class="form-icon">
+              <i class="fas fa-paper-plane"></i>
+            </div>
+          </div>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+              <i class="fas fa-user"></i>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+              <i class="fas fa-envelope"></i>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required>
+              <i class="fas fa-tag"></i>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="message" name="message" rows="6" placeholder="Tell us about your project..." required></textarea>
+              <i class="fas fa-comment-dots"></i>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                Sending...
+              </span>
+            </button>
+          </form>
+          <div id="form-message" class="form-message"></div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="info-header">
+            <h2>Get in Touch</h2>
+            <div class="info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+          </h2>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email Us</h4>
+              <p>skilllinkr@gmail.com</p>
+              <a href="mailto:skilllinkr@gmail.com" class="contact-link">Send Email</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Call Us</h4>
+              <p>+91 9694793883</p>
+              <a href="tel:+919694793883" class="contact-link">Call Now</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Visit Us</h4>
+              <p>Meerut, Uttar Pradesh</p>
+              <a href="#" class="contact-link">View on Map</a>
+            </div>
+          </div>
+
+          <div class="contact-item last">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Working Hours</h4>
+              <p>Mon - Sat: 9AM - 9PM</p>
+              <p>Sunday: 10AM - 6PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h4><span>Skill</span> Linkr</h4>
+          <p>Connecting businesses with top student talent. Quality guaranteed.</p>
+        </div>
+        <div class="footer-right">
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/radheyvallabh8/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Skill Linkr — All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
   </footer>
+
+  <script src="contact-scriptcontact.js"></script>
 </body>
 </html>
+
