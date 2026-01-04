@@ -1,180 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skill Linkr - Student Freelancer Platform</title>
-  <meta name="description" content="Skill Linkr connects student freelancers directly with clients — fast, affordable, and reliable.">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Linkr - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Temporary Basic Styling for Login Page (Ideally in style.css) */
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .login-container .btn-primary {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-container .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
- <body>
+<body>
  <header>
   <div class="menu-toggle">&#9776; </div>
       <div class="container">
-        <div class="logo">
+  <div class="logo">
   <img src="_Skill Linkr Personal Logo (1).png" alt="Logo">
 </div>
-
       <nav>
         <ul>
-          <li><a href="dashboard.html">Home</a></li>
-          <li><a href="for-students.html">For Students</a></li>
-          <li><a href="for-client.html">For Clients</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="index.html">Log Out</a></li>
+          <li><a href="pricings.html">Pricing</a></li>
+          <li><a href="contactme.html">Contact</a></li>
+          <li><a href="aboutus.html">About Us</a></li> 
         </ul>
       </nav>
     </div>
 </header>
-  </body>
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container">
-      <h2>Hire Talented Student Freelancers Directly</h2>
-      <p>Skill Linkr connects students with clients — fast, affordable & reliable.</p>
-      <div class="hero-buttons">
-        <button class="btn-primary">Hire Now</button>
-        <button class="btn-secondary">Join as Student Freelancer</button>
-      </div>
-    </div>
-  </section>
 
-  <!-- How It Works Section -->
-  <section id="how">
-    <div class="container">
-      <h3>How It Works</h3>
-      <div class="cards">
-        <div class="card">
-          <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
-          <h4>1. Post Project</h4>
-          <p>Clients post their project briefs easily.</p>
+    <div class="login-container">
+        <h2>Login to Skill Linkr</h2>
+        <form action="dashboard.html" method="GET"> 
+             <input type="text" name="username" placeholder="Enter Your Name" required>
+             <input type="text" name="password" placeholder="Enter Your Password" required>
+            <button type="submit" class="btn-primary">Login Now</button>
+        </form>
+    </div>
+    
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2025 Skill Linkr — All rights reserved.</p>
         </div>
-        <div class="card">
-          <h4>2. Students Apply</h4>
-          <p>Students submit proposals with portfolios.</p>
-        </div>
-        <div class="card">
-          <h4>3. Hire & Pay</h4>
-          <p>Clients hire, collaborate, and release payment securely.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Students Section -->
-  <section id="students">
-    <div class="container">
-      <h3>For Students</h3>
-      <div class="cards">
-        <div class="card">
-        <i class="fa fa-user fa-2x"></i>
-          <h4>Create Profile</h4>
-        <p>Build a portfolio showcasing your skills and projects.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-briefcase fa-2x"></i>
-        <h4>Apply to Projects</h4>
-        <p>Find freelance projects and submit proposals easily.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-check-circle fa-2x"></i>
-        <h4>Get Verified</h4>
-        <p>Earn credibility and boost your chances of getting hired.</p>
-      </div>
-    </div>
-  </div>
-</section>
-  <!-- Clients Section -->
-  <section id="clients">
-    <div class="container">
-      <h3>For Clients</h3>
-      <div class="cards">
-     <div class="card">
-        <i class="fa fa-pencil-alt fa-2x"></i>
-        <h4>Post Briefs</h4>
-        <p>Easily share your project requirements with students.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-search fa-2x"></i>
-        <h4>Review Portfolios</h4>
-        <p>Check student portfolios to find the perfect match for your project.</p>
-      </div>
-      <div class="card">
-        <i class="fa fa-dollar-sign fa-2x"></i>
-        <h4>Pay Safely</h4>
-        <p>Securely pay students after project completion.</p>
-      </div>
-    </div>
-  </div>
-</section>  
-
-  <!-- Pricing Section -->
-  <section id="pricing">
-    <div class="container">
-      <h3>Pricing</h3>
-      <div class="cards">
-        <div class="card">
-        <h4>Basic</h4>
-        <p>Free</p>
-        <p>Access to limited projects and profile</p>
-        <button class="btn-primary">Choose Plan</button>
-      </div>
-      <div class="card popular">
-        <h4>Pro</h4>
-        <p>₹99 / month</p>
-        <p>Unlimited projects & featured profile</p>
-        <button class="btn-primary">Choose Plan</button>
-      </div>
-      <div class="card">
-        <h4>Client</h4>
-        <p>Pay per project</p>
-        <p>Post projects and hire students easily</p>
-        <button class="btn-primary">Choose Plan</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h3>Contact</h3>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Message" rows="4" required></textarea>
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-  <div class="container footer-container">
-    <div class="footer-left">
-      <h4><span>Skill</span> Linkr</h4>
-      <p>Connecting students with clients directly.</p>
-    </div>
-    <div class="footer-right">
-      <p>Follow us:</p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-       <a href="https://www.instagram.com/radheyvallabh8/" target="_blank">
-       <i class="fab fa-instagram"></i>
-       </a>
-
-
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Skill Linkr — All rights reserved.</p>
-  </div>
-</footer>
+    </footer>
+</body>
 </html>
