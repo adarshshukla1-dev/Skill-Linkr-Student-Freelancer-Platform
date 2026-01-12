@@ -314,7 +314,7 @@ body.login-body {
   border-color: #2563eb;
 }
 
-.remember-me input:checked + .checkmark::after {
+.remember-me input:checked + .checkmark::after { 
   content: '';
   position: absolute;
   left: 5px;
